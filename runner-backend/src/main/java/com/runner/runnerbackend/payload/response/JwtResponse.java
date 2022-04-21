@@ -1,7 +1,5 @@
 package com.runner.runnerbackend.payload.response;
 
-import lombok.Data;
-
 import java.util.List;
 
 public class JwtResponse {

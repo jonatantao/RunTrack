@@ -1,7 +1,7 @@
 package com.runner.runnerbackend.services;
 
-import com.runner.runnerbackend.repository.UserRepository;
 import com.runner.runnerbackend.model.User;
+import com.runner.runnerbackend.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -1,7 +1,5 @@
 package com.runner.runnerbackend.payload.request;
 
-import lombok.Data;
-
 import javax.validation.constraints.NotBlank;
 
 public class LoginRequest {

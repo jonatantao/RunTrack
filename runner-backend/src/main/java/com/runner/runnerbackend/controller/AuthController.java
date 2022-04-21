@@ -1,15 +1,15 @@
 package com.runner.runnerbackend.controller;
 
-import com.runner.runnerbackend.repository.RoleRepository;
-import com.runner.runnerbackend.services.UserDetailsImpl;
 import com.runner.runnerbackend.model.Role;
 import com.runner.runnerbackend.model.User;
 import com.runner.runnerbackend.payload.request.LoginRequest;
 import com.runner.runnerbackend.payload.request.SignupRequest;
 import com.runner.runnerbackend.payload.response.JwtResponse;
 import com.runner.runnerbackend.payload.response.MessageResponse;
+import com.runner.runnerbackend.repository.RoleRepository;
 import com.runner.runnerbackend.repository.UserRepository;
 import com.runner.runnerbackend.security.jwt.JwtUtils;
+import com.runner.runnerbackend.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
