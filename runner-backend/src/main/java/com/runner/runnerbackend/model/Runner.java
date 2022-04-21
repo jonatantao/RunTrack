@@ -2,10 +2,7 @@ package com.runner.runnerbackend.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
@@ -13,7 +10,7 @@ import java.time.LocalDateTime;
 @Table(name = "runner")
 public class Runner {
     @Id
-    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "runner_full_name")
