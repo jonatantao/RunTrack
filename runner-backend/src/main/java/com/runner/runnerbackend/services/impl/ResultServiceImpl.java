@@ -19,8 +19,8 @@ public class ResultServiceImpl implements ResultService {
     }
 
     @Override
-    public Boolean add(Results results) {
-        return resultRepo.save(results)!=null;
+    public Results add(Results results) {
+        return resultRepo.save(results);
     }
 
     @Override

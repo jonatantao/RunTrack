@@ -19,8 +19,8 @@ public class CompetitionServiceImpl implements CompetitionService {
     }
 
     @Override
-    public Boolean add(Competition competition) {
-        return competitionRepo.save(competition)!=null;
+    public Competition add(Competition competition) {
+        return competitionRepo.save(competition);
     }
 
     @Override

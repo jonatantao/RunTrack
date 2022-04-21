@@ -19,8 +19,8 @@ public class OrganizerServiceImpl implements OrganizerService {
     }
 
     @Override
-    public Boolean add(Organizer organizer) {
-        return organizerRepo.save(organizer)!=null;
+    public Organizer add(Organizer organizer) {
+        return organizerRepo.save(organizer);
     }
 
     @Override

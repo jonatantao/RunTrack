@@ -8,7 +8,7 @@ public interface RunnerService {
 
     List<Runner> getAll();
 
-    Boolean add(Runner runner);
+    Runner add(Runner runner);
 
     void deleteById(Long id);
 

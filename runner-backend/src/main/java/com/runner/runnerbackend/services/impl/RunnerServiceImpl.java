@@ -19,8 +19,8 @@ public class RunnerServiceImpl implements RunnerService {
     }
 
     @Override
-    public Boolean add(Runner runner) {
-        return runnerRepo.save(runner)!=null;
+    public Runner add(Runner runner) {
+        return runnerRepo.save(runner);
     }
 
     @Override

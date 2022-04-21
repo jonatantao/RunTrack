@@ -8,7 +8,7 @@ public interface OrganizerService {
 
     List<Organizer> getAll();
 
-    Boolean add(Organizer organizer);
+    Organizer add(Organizer organizer);
 
     void deleteById(Long id);
 

@@ -8,7 +8,7 @@ public interface ResultService {
 
     List<Results> getAll();
 
-    Boolean add(Results results);
+    Results add(Results results);
 
     void deleteById(Long id);
 

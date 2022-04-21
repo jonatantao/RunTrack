@@ -8,7 +8,7 @@ public interface CompetitionService {
 
     List<Competition> getAll();
 
-    Boolean add(Competition competition);
+    Competition add(Competition competition);
 
     void deleteById(Long id);
 
