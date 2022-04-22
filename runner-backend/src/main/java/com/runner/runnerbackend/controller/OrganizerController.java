@@ -35,4 +35,9 @@ public class OrganizerController {
         organizer.setId(id);
         return organizerService.add(organizer);
     }
+
+    @DeleteMapping(value = "/{id}")
+    public void delete(@PathVariable Long id){
+        organizerService.deleteById(id);
+    }
 }

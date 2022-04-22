@@ -36,4 +36,9 @@ public class CompetitionController {
         return competitionService.add(competition);
     }
 
+    @DeleteMapping(value = "/{id}")
+    public void delete(@PathVariable Long id){
+        competitionService.deleteById(id);
+    }
+
 }

@@ -35,4 +35,9 @@ public class RunnerController {
         runner.setId(id);
         return runnerService.add(runner);
     }
+
+    @DeleteMapping(value = "/{id}")
+    public void delete(@PathVariable Long id){
+        runnerService.deleteById(id);
+    }
 }
