@@ -35,6 +35,22 @@ export class AppComponent implements OnInit {
     this.router.navigate(['users']);
   }
 
+  goToCompetition(){
+    this.router.navigate(['competitions']);
+  }
+
+  goToOrganizer(){
+    this.router.navigate(['organizers']);
+  }
+
+  goToResult(){
+    this.router.navigate(['results']);
+  }
+
+  goToRunner(){
+    this.router.navigate(['runners']);
+  }
+
   logout() {
     this.tokenStorageService.signOut();
     window.location.reload();
