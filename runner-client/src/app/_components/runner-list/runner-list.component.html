@@ -1,1 +1,33 @@
-<p>runner-list works!</p>
+<div class="panel panel-primary">
+    <br><br>
+  
+    <button (click) = "createUser()"  class="btn btn-success">Add Runner</button>
+    <button (click) = "getUsers()" class="btn btn-info" style="margin-left: 5px" >Runner List</button>
+  
+    <br><br>
+    <div class="panel-body">
+      <h3> Runner List </h3>
+        <!-- <table class = "table table-striped">
+            <thead>
+                <tr>
+                    <th> ID</th>
+                    <th> User Name </th>
+                    <th> Email </th>
+                    <th> Action </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let user of users" >
+                    <td> {{ user.id }} </td>
+                    <td> {{ user.username }} </td>
+                    <td> {{ user.email }} </td>
+                    <td>
+                        <button (click) = "updateUser(user.id)" class = "btn btn-info"> Update</button>
+                        <button (click) = "deleteUser(user.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                    
+                    </td>
+                </tr>
+            </tbody>
+        </table> -->
+  </div>
+  </div>
