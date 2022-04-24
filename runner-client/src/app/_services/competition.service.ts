@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Competition } from '../_model/Competition';
+import { Competition } from '../_model/competition';
 
 const API_URL = 'http://localhost:8080/api/competition/';
 

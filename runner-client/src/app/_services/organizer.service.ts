@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Organizer } from '../_model/Organizer';
+import { Organizer } from '../_model/organizer';
 
 const API_URL = 'http://localhost:8080/api/organizer/';
 

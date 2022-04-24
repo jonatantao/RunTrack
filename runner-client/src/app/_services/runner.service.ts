@@ -12,7 +12,7 @@ export class RunnerService {
 
   constructor(private http: HttpClient) { }
 
-  getRunner(): Observable<Runner[]>{
+  getRunners(): Observable<Runner[]>{
     return this.http.get<Runner[]>(API_URL);
   }
 

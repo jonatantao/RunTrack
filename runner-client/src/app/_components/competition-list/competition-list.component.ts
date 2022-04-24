@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Competition } from 'src/app/_model/competition';
+import { CompetitionService } from 'src/app/_services/competition.service';
 
 @Component({
   selector: 'app-competition-list',
@@ -7,9 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompetitionListComponent implements OnInit {
 
-  constructor() { }
+  competition: Competition[];
 
-  ngOnInit() {
-  }
+  constructor(private competitionService: CompetitionService,
+    private router: Router) { }
+
+    ngOnInit(): void {
+      this.reloadData();
+    }
+  
+    getOrganizers(){
+      this.competitionService.getCompetitions().subscribe(data => {
+        this.competition = data;
+      });
+    }
+  
+    updateOrganizer(id: number){
+      this.router.navigate(['update-competition', id]);
+    }
+  
+    createOrganizer(){
+      this.router.navigate(['create-competition']);
+    }
+  
+    deleteOrganizer(id: number){
+      this.competitionService.deleteCompetition(id).subscribe(data =>{
+        console.log(data);
+        this.reloadData();
+      })
+    }
+  
+    reloadData() {
+      this.competitionService.getCompetitions();
+    }
 
 }

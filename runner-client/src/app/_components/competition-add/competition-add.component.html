@@ -1,1 +1,43 @@
-<p>competition-add works!</p>
+<div class="col-md-6 offset-md-3">
+    <br><br>
+
+    
+    <button (click)="goToCompetitionList()" class="btn btn-info" style="margin-left: 5px" >Competition List</button>
+
+    <br><br>
+    <form (ngSubmit) = "onSubmit()">
+        <h3> Create Competition </h3>
+    
+        <div class="form-group">
+            <label>Competition Name</label>
+            <input type="text" class ="form-control" id = "username"
+                [(ngModel)] = "competition.competitionName" name = "competitionName">
+        </div>
+
+        <div class="form-group">
+            <label>Competition Description</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "competition.competitionDescription" name = "competitionDescription">
+        </div>
+
+        <div class="form-group">
+            <label>Organization</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "competition.organizer.organizerName" name = "organizer.organizerName">
+        </div>
+        <div class="form-group">
+            <label>Competition Date</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "competition.competitionDate" name = "competitionDate">
+        </div>
+        <div class="form-group">
+            <label>Competition Price</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "competition.competitionPrice" name = "competitionPrice">
+        </div>
+    
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 

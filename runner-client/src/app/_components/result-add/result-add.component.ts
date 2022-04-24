@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Result } from 'src/app/_model/result';
+import { ResultService } from 'src/app/_services/result.service';
 
 @Component({
   selector: 'app-result-add',
@@ -7,7 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultAddComponent implements OnInit {
 
-  constructor() { }
+  result: Result = new Result();
+
+  constructor(private resultService: ResultService,
+    private router: Router) { }
 
   ngOnInit() {
   }

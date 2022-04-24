@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { OrganizerService } from 'src/app/_services/organizer.service';
 
 @Component({
   selector: 'app-organizer-edit',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrganizerEditComponent implements OnInit {
 
-  constructor() { }
+  constructor(private organizerService: OrganizerService,
+    private router: Router) { }
 
   ngOnInit() {
   }

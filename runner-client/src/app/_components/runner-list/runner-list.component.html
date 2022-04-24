@@ -1,33 +1,35 @@
 <div class="panel panel-primary">
     <br><br>
   
-    <button (click) = "createUser()"  class="btn btn-success">Add Runner</button>
-    <button (click) = "getUsers()" class="btn btn-info" style="margin-left: 5px" >Runner List</button>
+    <button (click) = "createRunner()"  class="btn btn-success">Add Runner</button>
+    <button (click) = "getRunners()" class="btn btn-info" style="margin-left: 5px" >Runner List</button>
   
     <br><br>
     <div class="panel-body">
       <h3> Runner List </h3>
-        <!-- <table class = "table table-striped">
+        <table class = "table table-striped">
             <thead>
                 <tr>
                     <th> ID</th>
-                    <th> User Name </th>
-                    <th> Email </th>
+                    <th> Runner Name </th>
+                    <th> Runner Birth Day </th>
+                    <th> Runner Club</th>
                     <th> Action </th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor = "let user of users" >
-                    <td> {{ user.id }} </td>
-                    <td> {{ user.username }} </td>
-                    <td> {{ user.email }} </td>
+                <tr *ngFor = "let runner of runners" >
+                    <td> {{ runner.id }} </td>
+                    <td> {{ runner.runnerFullName }} </td>
+                    <td> {{ runner.runnerBirthDate }} </td>
+                    <td> {{ runner.runnerClub }} </td>
                     <td>
-                        <button (click) = "updateUser(user.id)" class = "btn btn-info"> Update</button>
-                        <button (click) = "deleteUser(user.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                        <button (click) = "updateRunner(runner.id)" class = "btn btn-info"> Update</button>
+                        <button (click) = "deleteRunner(runner.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
                     
                     </td>
                 </tr>
             </tbody>
-        </table> -->
+        </table>
   </div>
   </div>

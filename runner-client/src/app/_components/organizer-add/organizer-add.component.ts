@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Organizer } from 'src/app/_model/organizer';
+import { OrganizerService } from 'src/app/_services/organizer.service';
 
 @Component({
   selector: 'app-organizer-add',
@@ -7,9 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrganizerAddComponent implements OnInit {
 
-  constructor() { }
+  organizer: Organizer = new Organizer();
 
-  ngOnInit() {
-  }
+  constructor(private organizerService: OrganizerService,
+    private router: Router) { }
 
+    ngOnInit(): void {
+    }
+  
+    saveOrganizer(){
+      this.organizerService.createOrganizer(this.organizer).subscribe( data =>{
+        console.log(data);
+        this.goToOrganizerList();
+      },
+      error => console.log(error));
+    }
+  
+    goToOrganizerList(){
+      this.router.navigate(['organizers']);
+    }
+  
+    createOrganizer(){
+      this.router.navigate(['create-organizer']);
+    }
+    
+    onSubmit(){
+      console.log(this.organizer);
+      this.saveOrganizer();
+    }
 }

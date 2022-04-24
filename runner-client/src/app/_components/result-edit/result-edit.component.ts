@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ResultService } from 'src/app/_services/result.service';
 
 @Component({
   selector: 'app-result-edit',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultEditComponent implements OnInit {
 
-  constructor() { }
+  constructor(private resultService: ResultService,
+    private router: Router) { }
 
   ngOnInit() {
   }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CompetitionService } from 'src/app/_services/competition.service';
 
 @Component({
   selector: 'app-competition-edit',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompetitionEditComponent implements OnInit {
 
-  constructor() { }
+  constructor(private competitionService: CompetitionService,
+    private router: Router) { }
 
   ngOnInit() {
   }

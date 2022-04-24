@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { RunnerService } from 'src/app/_services/runner.service';
 
 @Component({
   selector: 'app-runner-edit',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RunnerEditComponent implements OnInit {
 
-  constructor() { }
+  constructor(private runnerService: RunnerService,
+    private router: Router) { }
 
   ngOnInit() {
   }

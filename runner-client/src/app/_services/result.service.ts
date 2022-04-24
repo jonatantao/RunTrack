@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Result } from '../_model/Result';
+import { Result } from '../_model/result';
 
 const API_URL = 'http://localhost:8080/api/result/';
 
