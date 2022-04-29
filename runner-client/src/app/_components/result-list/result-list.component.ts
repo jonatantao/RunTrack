@@ -20,7 +20,7 @@ export class ResultListComponent implements OnInit {
 
     getResult(){
       this.resultService.getResult().subscribe(data => {
-        this.result = data;
+        this.results = data;
       });
     }
 
