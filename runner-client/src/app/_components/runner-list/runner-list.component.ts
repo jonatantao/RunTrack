@@ -9,7 +9,7 @@ import { RunnerService } from 'src/app/_services/runner.service';
   styleUrls: ['./runner-list.component.css']
 })
 export class RunnerListComponent implements OnInit {
-  runner: Runner[];
+  runners: Runner[];
 
   constructor(private runnerService: RunnerService,
     private router: Router) { }
@@ -20,7 +20,7 @@ ngOnInit(): void {
 
   getRunners(){
     this.runnerService.getRunners().subscribe(data => {
-      this.runner = data;
+      this.runners = data;
     });
   }
 

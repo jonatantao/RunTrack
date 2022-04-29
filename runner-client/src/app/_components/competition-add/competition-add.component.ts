@@ -17,7 +17,7 @@ export class CompetitionAddComponent implements OnInit {
 
     ngOnInit(): void {
     }
-  
+
     saveCompetition(){
       this.competitionService.createCompetition(this.competition).subscribe( data =>{
         console.log(data);
@@ -25,15 +25,15 @@ export class CompetitionAddComponent implements OnInit {
       },
       error => console.log(error));
     }
-  
+
     goToCompetitionList(){
       this.router.navigate(['competitions']);
     }
-  
-    createUser(){
+
+    createCompetition(){
       this.router.navigate(['create-competition']);
     }
-    
+
     onSubmit(){
       console.log(this.competition);
       this.saveCompetition();

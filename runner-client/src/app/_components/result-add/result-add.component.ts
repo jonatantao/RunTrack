@@ -15,7 +15,27 @@ export class ResultAddComponent implements OnInit {
   constructor(private resultService: ResultService,
     private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
+  saveResult(){
+    this.resultService.createResult(this.result).subscribe( data =>{
+        console.log(data);
+        this.goToResultList();
+      },
+      error => console.log(error));
+  }
+
+  goToResultList(){
+    this.router.navigate(['results']);
+  }
+
+  createResult(){
+    this.router.navigate(['create-result']);
+  }
+
+  onSubmit(){
+    console.log(this.result);
+    this.saveResult();
+  }
 }

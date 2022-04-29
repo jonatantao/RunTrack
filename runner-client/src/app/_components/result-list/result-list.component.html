@@ -1,9 +1,9 @@
 <div class="panel panel-primary">
     <br><br>
-  
-    <!-- <button (click) = "createUser()"  class="btn btn-success">Add Result</button> -->
-    <!-- <button (click) = "getUsers()" class="btn btn-info" style="margin-left: 5px" >Result List</button> -->
-  
+
+    <button (click) = "createResult()"  class="btn btn-success">Add Result</button>
+    <button (click) = "getResult()" class="btn btn-info" style="margin-left: 5px" >Result List</button>
+
     <br><br>
     <div class="panel-body">
       <h3> Result List </h3>
@@ -24,9 +24,9 @@
                     <td> {{ result.resultsTime }} </td>
                     <td> {{ result.resultsPlace }} </td>
                     <td>
-                        <button (click) = "updateUser(result.id)" class = "btn btn-info"> Update</button>
-                        <button (click) = "deleteUser(result.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                    
+                        <button (click) = "updateResult(result.id)" class = "btn btn-info"> Update</button>
+                        <button (click) = "deleteResult(result.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+
                     </td>
                 </tr>
             </tbody>

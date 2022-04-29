@@ -1,9 +1,9 @@
 <div class="panel panel-primary">
     <br><br>
-  
-    <button (click) = "createOrganizer()"  class="btn btn-success">Add Competator</button>
-    <button (click) = "getOrganizers()" class="btn btn-info" style="margin-left: 5px" >Competator List</button>
-  
+
+    <button (click) = "createCompetition()"  class="btn btn-success">Add Competator</button>
+    <button (click) = "getCompetition()" class="btn btn-info" style="margin-left: 5px" >Competator List</button>
+
     <br><br>
     <div class="panel-body">
       <h3> Competator List </h3>
@@ -28,9 +28,9 @@
                     <td> {{ competition.competitionDate }} </td>
                     <td> {{ competition.competitionPrice }} </td>
                     <td>
-                        <button (click) = "updateUser(user.id)" class = "btn btn-info"> Update</button>
-                        <button (click) = "deleteUser(user.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                    
+                        <button (click) = "updateCompetition(competition.id)" class = "btn btn-info"> Update</button>
+                        <button (click) = "deleteCompetition(competition.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+
                     </td>
                 </tr>
             </tbody>

@@ -1,9 +1,9 @@
 <div class="panel panel-primary">
     <br><br>
-  
+
     <button (click) = "createOrganizer()"  class="btn btn-success">Add Organizer</button>
-    <button (click) = "getUsers()" class="btn btn-info" style="margin-left: 5px" >Organizer List</button>
-  
+    <button (click) = "getOrganizers()" class="btn btn-info" style="margin-left: 5px" >Organizer List</button>
+
     <br><br>
     <div class="panel-body">
       <h3> Organizer List </h3>
@@ -25,7 +25,7 @@
                     <td>
                         <button (click) = "updateOrganizer(organizer.id)" class = "btn btn-info"> Update</button>
                         <button (click) = "deleteOrganizer(organizer.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-                    
+
                     </td>
                 </tr>
             </tbody>

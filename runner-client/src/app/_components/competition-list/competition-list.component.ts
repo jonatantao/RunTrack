@@ -10,36 +10,36 @@ import { CompetitionService } from 'src/app/_services/competition.service';
 })
 export class CompetitionListComponent implements OnInit {
 
-  competition: Competition[];
+  competitions: Competition[];
 
   constructor(private competitionService: CompetitionService,
-    private router: Router) { }
+              private router: Router) { }
 
     ngOnInit(): void {
       this.reloadData();
     }
-  
-    getOrganizers(){
+
+    getCompetition() {
       this.competitionService.getCompetitions().subscribe(data => {
-        this.competition = data;
+        this.competitions = data;
       });
     }
-  
-    updateOrganizer(id: number){
+
+    updateCompetition(id: number) {
       this.router.navigate(['update-competition', id]);
     }
-  
-    createOrganizer(){
+
+    createCompetition() {
       this.router.navigate(['create-competition']);
     }
-  
-    deleteOrganizer(id: number){
-      this.competitionService.deleteCompetition(id).subscribe(data =>{
+
+    deleteCompetition(id: number) {
+      this.competitionService.deleteCompetition(id).subscribe(data => {
         console.log(data);
         this.reloadData();
-      })
+      });
     }
-  
+
     reloadData() {
       this.competitionService.getCompetitions();
     }
