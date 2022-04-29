@@ -1,32 +1,32 @@
 <div class="col-md-6 offset-md-3">
     <br><br>
 
-    
+
     <button (click)="goToRunnerList()" class="btn btn-info" style="margin-left: 5px" >Runner List</button>
 
     <br><br>
     <form (ngSubmit) = "onSubmit()">
         <h3> Create Runner </h3>
-    
+
         <div class="form-group">
             <label>Runner Name</label>
             <input type="text" class ="form-control" id = "username"
                 [(ngModel)] = "runner.runnerFullName" name = "runnerFullName">
         </div>
 
-        <div class="form-group">
+       <!-- <div class="form-group">
             <label>Runenr Birth Day</label>
-            <input type="text" class ="form-control" id = "email"
+            <input type="text" class ="form-control" id = "date"
                 [(ngModel)] = "runner.runnerBirthDate" name = "runnerBirthDate">
-        </div>
+        </div>-->
 
         <div class="form-group">
             <label>Runner Club</label>
-            <input type="text" class ="form-control" id = "email"
+            <input type="text" class ="form-control" id = "club"
                 [(ngModel)] = "runner.runnerClub" name = "runnerClub">
         </div>
-     
+
         <button class = "btn btn-success" type ="submit">Submit</button>
-    
+
     </form>
-    </div> 
+    </div>
