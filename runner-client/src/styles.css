@@ -1,1 +1,12 @@
+body{
+  background-color: #ff7b00 !important;
+}
+
+.table thead th {
+  border-bottom: solid black;
+}
+
+.table td, .table th {
+  border-top: solid black;
+}
 /* You can add global styles to this file, and also import other style files */
