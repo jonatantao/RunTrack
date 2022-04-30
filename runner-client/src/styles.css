@@ -1,3 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+
 body{
   background-color: #ff7b00 !important;
 }
@@ -9,4 +11,7 @@ body{
 .table td, .table th {
   border-top: solid black;
 }
-/* You can add global styles to this file, and also import other style files */
+
+.jumbotron {
+  background-color: #ee4f00;
+}
