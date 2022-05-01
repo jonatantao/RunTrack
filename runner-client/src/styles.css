@@ -15,3 +15,7 @@ body{
 .jumbotron {
   background-color: #ee4f00;
 }
+
+.card {
+  background-color: #ee4f00!important;
+}
