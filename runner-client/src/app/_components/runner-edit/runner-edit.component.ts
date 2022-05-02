@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { RunnerService } from 'src/app/_services/runner.service';
+import {Runner} from '../../_model/Runner';
 
 @Component({
   selector: 'app-runner-edit',
@@ -9,10 +10,33 @@ import { RunnerService } from 'src/app/_services/runner.service';
 })
 export class RunnerEditComponent implements OnInit {
 
+  id: number;
+  runner: Runner;
   constructor(private runnerService: RunnerService,
-    private router: Router) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params.id;
+
+    this.runnerService.getRunnerById(this.id).subscribe(data => {
+      this.runner = data;
+    }, error => console.log(error));
+  }
+
+  onSubmit() {
+    this.runnerService.updateRunner(this.id, this.runner).subscribe( data => {
+        this.goToRunnerList();
+      }
+      , error => console.log(error));
+  }
+
+  goToRunnerList() {
+    this.router.navigate(['runners']);
+  }
+
+  createRunner() {
+    this.router.navigate(['create-runner']);
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { ResultService } from 'src/app/_services/result.service';
+import {Result} from '../../_model/Result';
 
 @Component({
   selector: 'app-result-edit',
@@ -9,10 +10,33 @@ import { ResultService } from 'src/app/_services/result.service';
 })
 export class ResultEditComponent implements OnInit {
 
+  id: number;
+  result: Result;
   constructor(private resultService: ResultService,
-    private router: Router) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params.id;
+
+    this.resultService.getResultById(this.id).subscribe(data => {
+      this.result = data;
+    }, error => console.log(error));
+  }
+
+  onSubmit() {
+    this.resultService.updateResult(this.id, this.result).subscribe( data => {
+        this.goToResultList();
+      }
+      , error => console.log(error));
+  }
+
+  goToResultList() {
+    this.router.navigate(['results']);
+  }
+
+  createResult() {
+    this.router.navigate(['create-result']);
   }
 
 }

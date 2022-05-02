@@ -1,1 +1,40 @@
-<p>competition-edit works!</p>
+<div class="col-md-6 offset-md-3">
+
+  <br><br>
+  <button (click) = "createCompetition()"  class="btn btn-success">Add</button>
+  <button (click) = "goToCompetitionList()" class="btn btn-info" style="margin-left: 5px" >List</button>
+
+  <br><br>
+
+  <h3> Update Competition </h3>
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label>Competition Name</label>
+      <input type="text" class ="form-control" id = "email"
+             [(ngModel)] = "competition.competitionName" name = "email">
+    </div>
+    <div class="form-group">
+      <label>Competition Description</label>
+      <input type="text" class ="form-control" id = "club"
+             [(ngModel)] = "competition.competitionDescription" name = "club">
+    </div>
+    <div class="form-group">
+      <label>Competition Organisation</label>
+      <input type="text" class ="form-control" id = "organisation"
+             [(ngModel)] = "competition.organizerId" name = "organisation">
+    </div>
+    <div class="form-group">
+      <label>Competition Date</label>
+      <input type="text" class ="form-control" id = "date"
+             [(ngModel)] = "competition.competitionDate" name = "date">
+    </div>
+    <div class="form-group">
+      <label>Competition Price</label>
+      <input type="text" class ="form-control" id = "price"
+             [(ngModel)] = "competition.competitionPrice" name = "price">
+    </div>
+    <button class = "btn btn-success" type ="submit">Submit</button>
+
+  </form>
+</div>

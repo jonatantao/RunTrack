@@ -1,1 +1,31 @@
-<p>runner-edit works!</p>
+<div class="col-md-6 offset-md-3">
+
+  <br><br>
+  <button (click) = "createRunner()"  class="btn btn-success">Add</button>
+  <button (click) = "goToRunnerList()" class="btn btn-info" style="margin-left: 5px" >List</button>
+
+  <br><br>
+
+  <h3> Update Runner </h3>
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label>Runner Fullname</label>
+      <input type="text" class ="form-control" id = "username"
+             [(ngModel)] = "runner.runnerFullName" name = "username">
+    </div>
+    <div class="form-group">
+      <label> Runner Birthdate</label>
+      <input type="text" class ="form-control" id = "email"
+             [(ngModel)] = "runner.runnerBirthDate" name = "email">
+    </div>
+    <div class="form-group">
+      <label>Runner Club</label>
+      <input type="text" class ="form-control" id = "club"
+             [(ngModel)] = "runner.runnerClub" name = "club">
+    </div>
+
+    <button class = "btn btn-success" type ="submit">Submit</button>
+
+  </form>
+</div>

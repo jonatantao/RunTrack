@@ -1,1 +1,30 @@
-<p>organizer-edit works!</p>
+<div class="col-md-6 offset-md-3">
+
+  <br><br>
+  <button (click) = "createOrganizer()"  class="btn btn-success">Add</button>
+  <button (click) = "goToOrganizerList()" class="btn btn-info" style="margin-left: 5px" >List</button>
+
+  <br><br>
+
+  <h3> Update Organizer </h3>
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label>Organizer Name</label>
+      <input type="text" class ="form-control" id = "email"
+             [(ngModel)] = "organizer.organizerName" name = "email">
+    </div>
+    <div class="form-group">
+      <label>Organizer Club</label>
+      <input type="text" class ="form-control" id = "club"
+             [(ngModel)] = "organizer.organizerClub" name = "club">
+    </div>
+    <div class="form-group">
+      <label>Organizer Description</label>
+      <input type="text" class ="form-control" id = "description"
+             [(ngModel)] = "organizer.organizerDescription" name = "description">
+    </div>
+    <button class = "btn btn-success" type ="submit">Submit</button>
+
+  </form>
+</div>
