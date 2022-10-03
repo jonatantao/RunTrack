@@ -28,11 +28,14 @@ class OrganizerControllerTest {
     private OrganizerServiceImpl organizerService;
 
     private static ObjectMapper mapper = new ObjectMapper();
+    private Organizer fakeEntity2 = new Organizer().setId(1l).setOrganizerName("ertert").setOrganizerDescription("dsada");
+
 
     @Test
     @SneakyThrows
-    public void saveOrganizer() {
-        when(organizerService.add(any())).thenReturn();
+    public void add() {
+        Organizer organizer;
+        when(organizerService.add(any())).thenReturn(fakeEntity2);
 
         Organizer org = new Organizer().setOrganizerName("fdsf").setOrganizerClub("fds");
         String json = mapper.writeValueAsString(org);
@@ -46,7 +49,5 @@ class OrganizerControllerTest {
 
         verify(organizerService, times(1)).add(any());
     }
-
-
 
 }
